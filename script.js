@@ -2,7 +2,7 @@
 function onScanSuccess(qrCodeMessage) {
   document.getElementById("result").innerHTML =
     '<span class="result">' + qrCodeMessage + "</span>";
-    alert('yippee')
+
     html5QrCodeScanner.stop();
     html5QrCodeScanner.clear();
 }
