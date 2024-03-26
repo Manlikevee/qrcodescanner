@@ -27,6 +27,7 @@
   </div>
 
 </div>
+<button id="toggleFlashlight" onclick="toggleFlashlight()">Toggle Flashlight</button>
 <button onclick="startScan()">Start Scan</button>
 <button onclick=" stopscan()">stop</button>
 <!-- partial -->
@@ -51,6 +52,17 @@ function startScan() {
 function stopscan() {
   html5QrcodeScanner.clear();
 }
+
+function toggleFlashlight() {
+            const flashlightState = html5QrcodeScanner.isFlashOn();
+            if (flashlightState) {
+                html5QrcodeScanner.turnOffFlash();
+                document.getElementById("toggleFlashlight").innerText = "Turn On Flashlight";
+            } else {
+                html5QrcodeScanner.turnOnFlash();
+                document.getElementById("toggleFlashlight").innerText = "Turn Off Flashlight";
+            }
+        }
 </script>
 
 
